@@ -1,6 +1,6 @@
 # opencode-lazy-mcp
 
-On-demand startup for heavy local MCP servers in OpenCode v2, with a metadata cache so the model
+On-demand startup for local MCP servers in OpenCode v2, with a metadata cache so the model
 knows a server's tools before it runs.
 
 **Project scaffold only.** There is no implementation, installable package, release, or verified
@@ -8,9 +8,9 @@ OpenCode compatibility yet. The next step is a feasibility test against an exact
 
 ## What it is meant to do
 
-OpenCode starts every enabled MCP server when it loads a project. Local servers that drive large
-applications or analysis tools use memory and startup time in every open project folder, even when
-the session never calls them. The planned plugin keeps selected servers stopped until they are
+OpenCode starts every enabled MCP server when it loads a project. Each open project folder gets its
+own copy, so even small local servers add up, and servers that drive large applications or analysis
+tools cost memory and startup time even when the session never calls them. The planned plugin keeps selected servers stopped until they are
 needed, starts them after user confirmation, describes their tools from a cache while they are
 stopped, and shuts them down after a period without use.
 
