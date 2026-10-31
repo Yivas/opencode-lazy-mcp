@@ -8,9 +8,10 @@ OpenCode compatibility yet. The next step is a feasibility test against an exact
 
 ## What it is meant to do
 
-OpenCode starts every enabled MCP server when it loads a project. Each open project folder gets its
-own copy, so even small local servers add up, and servers that drive large applications or analysis
-tools cost memory and startup time even when the session never calls them. The planned plugin keeps selected servers stopped until they are
+OpenCode starts every enabled MCP server when it loads a project. OpenCode's source suggests that
+each open project folder gets its own copy (not yet verified), so even small local servers can add
+up, and servers that drive large applications or analysis tools cost memory and startup time even
+when the session never calls them. The planned plugin keeps selected servers stopped until they are
 needed, starts them after user confirmation, describes their tools from a cache while they are
 stopped, and shuts them down after a period without use.
 
